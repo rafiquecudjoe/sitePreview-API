@@ -8,7 +8,7 @@ export class ParseController {
     constructor(private webPreviewService: WebPreviewService) { }
     @Get('')
     async findAll(@Query('url') url: string): Promise<any> {
-        console.log("Himmmmm")
+        
         // Checks if url metadata is cached in the database
         const webPreview = await this.webPreviewService.webPreview(url)
         if (webPreview) {
