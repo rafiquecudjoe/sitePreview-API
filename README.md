@@ -33,7 +33,7 @@ Prisma database orm https://www.prisma.io/
 ## Endpoints 
 
  ```sh
-  GET   https://localhost:3000/api/parse:url
+  GET   https://localhost:4000/api/parse?url
    ```
 
 ## API Call
@@ -43,13 +43,13 @@ https://localhost:3000/api/parse?url={url of website}
 
 ## Code Examples :
 
- https://localhost:3000/api/parse?url=https://nextjs.org/docs/api-routes/dynamic-api-routes
+ https://localhost:4000/parse?url=https://nextjs.org/docs/api-routes/dynamic-api-routes
 
 
 
 ## Query Parameters 
 
-url -  required  - This is the url that will be parsed to get the metadata with includes title,description and favicon of the website
+url -  required  - This is the url that will be parsed to get the metadata with includes title,description and favicon of the website. start with https
 
 
 
