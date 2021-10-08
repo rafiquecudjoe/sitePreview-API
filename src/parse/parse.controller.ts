@@ -12,7 +12,9 @@ export class ParseController {
         // Checks if url metadata is cached in the database
         const webPreview = await this.webPreviewService.webPreview(url)
         if (webPreview) {
-            return {webPreview }
+
+            let {title,favicon,description} = webPreview
+            return {title,favicon,description}
         }
         else {
             //passes the request url to the getMetaData function
@@ -24,7 +26,7 @@ export class ParseController {
                 title, favicon: icon, description, url
            })
             if(newPreview)
-
+           
                 return { newPreview };
 
 
