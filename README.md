@@ -33,12 +33,12 @@ Prisma database orm https://www.prisma.io/
 ## Endpoints 
 
  ```sh
-  GET   https://localhost:4000/api/parse?url
+  GET   https://localhost:4000/parse/?url
    ```
 
 ## API Call
 
-https://localhost:3000/api/parse?url={url of website}
+https://localhost:3000/parse/?url={url of website}
 
 
 ## Code Examples :
@@ -62,8 +62,7 @@ url -  required  - This is the url that will be parsed to get the metadata with 
 
 Status 200 = Success
 
-Status 500 = Server Error
+Status 500 =  Internal Server Error
 
-Response code 999 = (Request denied)
 
 

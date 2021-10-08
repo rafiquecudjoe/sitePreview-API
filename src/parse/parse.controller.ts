@@ -8,16 +8,19 @@ export class ParseController {
     constructor(private webPreviewService: WebPreviewService) { }
     @Get('')
     async findAll(@Query('url') url: string): Promise<any> {
-
+        console.log("Himmmmm")
         // Checks if url metadata is cached in the database
         const webPreview = await this.webPreviewService.webPreview(url)
         if (webPreview) {
+           
                   
             //destructs the webPreview object and sends to user
             let { title, favicon, description } = webPreview
             return { title, favicon, description }
         }
         else {
+
+           
             //passes the request url to the getMetaData function
             const data = await getMetaData(url)
 
