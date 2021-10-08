@@ -33,17 +33,17 @@ Prisma database orm https://www.prisma.io/
 ## Endpoints 
 
  ```sh
-  GET   https://localhost:4000/parse/?url
+  GET   http://localhost:4000/parse/?url
    ```
 
 ## API Call
 
-https://localhost:3000/parse/?url={url of website}
+http://localhost:3000/parse/?url={url of website}
 
 
 ## Code Examples :
 
- https://localhost:4000/parse?url=https://nextjs.org/docs/api-routes/dynamic-api-routes
+ http://localhost:4000/parse?url=https://nextjs.org/docs/api-routes/dynamic-api-routes
 
 
 
