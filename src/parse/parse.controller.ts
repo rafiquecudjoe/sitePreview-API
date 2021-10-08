@@ -9,25 +9,31 @@ export class ParseController {
     @Get('')
     async findAll(@Query('url') url: string): Promise<any> {
 
-
+        // Checks if url metadata is cached in the database
         const webPreview = await this.webPreviewService.webPreview(url)
         if (webPreview) {
             return webPreview
         }
-        const data = await getMetaData(url)
+        else {
+            //passes the request url to the getMetaData function
+            const data = await getMetaData(url)
+            //destruct the data object from the response
+            const { title, icon, description } = data;
 
-        const { title, icon, description } = data;
+            await this.webPreviewService.createWebPreview1({
+                title, favicon: icon, description, url
+            })
 
-        console.log(data)
-
-        return this.webPreviewService.createWebPreview1({
-            title, favicon: icon, description, url
-        })
+            return { title: title, favicon: icon, description: description };
 
 
 
+        }
 
-        return { title, icon, description };
+
+
+
+        return;
     }
 
 }
