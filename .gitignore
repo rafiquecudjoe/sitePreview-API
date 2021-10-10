@@ -331,11 +331,6 @@ paket-files/
 *.sln.iml
 
 # IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
 
 # CodeRush
 .cr/
@@ -396,3 +391,6 @@ Temporary Items
 # Local
 .env
 dist
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
